@@ -1,0 +1,6 @@
+# robots.txt for https://drcheat.on.ma
+
+User-agent: *
+Allow: /
+
+Sitemap: https://drcheat.on.ma/sitemap.xml

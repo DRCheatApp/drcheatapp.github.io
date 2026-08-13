@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>DRCheat - Updates</title>
+    <link rel="canonical" href="https://drcheat.on.ma/updates">
+
+    <link rel="stylesheet" href="/assets/index.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DRCheat — Updates">
+    <meta property="og:description" content="View the latest DRCheat updates, improvements, and upcoming features.">
+    <meta property="og:url" content="https://drcheat.on.ma/updates">
+    <meta property="og:image" content="https://drcheat.on.ma/assets/og-image.png">
+    <meta property="og:site_name" content="DRCheat">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DRCheat — Updates">
+    <meta name="twitter:description" content="View the latest DRCheat updates, improvements, and upcoming features.">
+    <meta name="twitter:image" content="https://drcheat.on.ma/assets/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <script defer src="https://analytics.drcheat.on.ma/script.js"
+        data-website-id="e229d706-42db-4bab-a786-68987f3311f6">
+    </script>
+
+    <script defer src="https://analytics.drcheat.on.ma/recorder.js"
+        data-website-id="e229d706-42db-4bab-a786-68987f3311f6">
+    </script>
+
+    <style>
+        /* =========================================================
+           UPDATES PAGE
+           Uses the main DRCheat styling from index.css.
+           These styles only control the changelog layout.
+        ========================================================= */
+
+        .updates-page {
+            padding: 140px 0 80px;
+        }
+
+        .updates-header {
+            max-width: 850px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .updates-header .section-label {
+            margin-bottom: 12px;
+        }
+
+        .updates-header .section-title {
+            margin-bottom: 16px;
+        }
+
+        .updates-header .section-desc {
+            margin: 0 auto;
+            max-width: 650px;
+        }
+
+        .updates-list {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .update-window {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .update-toolbar {
+            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 0 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .update-toolbar span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .update-toolbar-title {
+            margin-left: 10px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .update-content {
+            padding: 32px;
+        }
+
+        .update-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .update-version {
+            font-family: "JetBrains Mono", monospace;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 7px;
+        }
+
+        .update-title {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.25;
+        }
+
+        .update-date {
+            flex-shrink: 0;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.45);
+            padding-top: 5px;
+        }
+
+        .update-description {
+            margin: 0 0 24px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .update-section {
+            margin-top: 24px;
+        }
+
+        .update-section h4 {
+            margin: 0 0 12px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .update-section ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .update-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 999px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 11px;
+            margin-bottom: 14px;
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .update-badge.upcoming {
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .updates-empty {
+            text-align: center;
+            padding: 50px 20px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        @media (max-width: 700px) {
+
+            .updates-page {
+                padding: 110px 0 60px;
+            }
+
+            .updates-header {
+                margin-bottom: 35px;
+            }
+
+            .updates-list {
+                gap: 20px;
+            }
+
+            .update-content {
+                padding: 24px 20px;
+            }
+
+            .update-top {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .update-date {
+                padding-top: 0;
+            }
+
+            .update-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+
+            <a href="/" class="nav-brand" data-umami-event="logo">
+                <img
+                    src="/assets/logo.png"
+                    alt="DRCheat Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="/#features" data-umami-event="features">
+                        Features
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/#pricing" data-umami-event="pricing">
+                        Pricing
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/#faq" data-umami-event="faq">
+                        FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/updates" data-umami-event="updates">
+                        Updates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/contact" data-umami-event="contact">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li class="nav-mobile-actions">
+                    <a
+                        href="/#subscribe"
+                        data-umami-event="subscribe"
+                        class="btn btn-primary"
+                    >
+                        Sign up for updates
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+                <a
+                    href="/#subscribe"
+                    data-umami-event="subscribe"
+                    class="btn btn-primary"
+                >
+                    Sign up for updates
+                </a>
+            </div>
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle menu"
+                data-umami-event="mobile-nav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </nav>
+
+
+    <!-- UPDATES -->
+    <main class="updates-page">
+        <div class="container">
+            <header class="updates-header fade-up">
+                <p class="section-label">Updates</p>
+                <h1 class="section-title">What's new.</h1>
+
+                <p class="section-desc">
+                    Follow the latest DRCheat releases, improvements,
+                    fixes, and upcoming features.
+                </p>
+
+            </header>
+
+
+            <div class="updates-list">
+
+
+                <!-- =================================================
+                     UPCOMING UPDATE
+                ================================================== -->
+
+                <article class="update-window fade-up">
+                    <div class="update-toolbar">
+                        <i class="update-dot dot-red"></i>
+                        <i class="update-dot dot-yellow"></i>
+                        <i class="update-dot dot-green"></i>
+                        <span class="update-toolbar-title">Application.exe</span>
+                    </div>
+                    <div class="update-content">
+                        <div class="update-top">
+                            <div>
+                                <div class="update-version">v2.0.0</div>
+                                <h2 class="update-title">The next generation of DRCheat</h2>
+                            </div>
+                            <div class="update-date">Coming soon</div>
+                        </div>
+                        <div class="update-badge upcoming">Upcoming</div>
+                        <p class="update-description">
+                            DRCheat 2.0.0 is currently in development.
+                            This release introduces major improvements
+                            across the application and expands the toolkit
+                            with new features and workflow improvements.
+                        </p>
+
+                        <div class="update-section">
+                            <h4>What's coming</h4>
+                            <ul>
+                                <li>Riddy AI</li>
+                                <li>Expanded calculator suite</li>
+                                <li>Additional productivity tools</li>
+                                <li>Improved image processing features</li>
+                                <li>Performance and reliability improvements</li>
+                                <li>UI improvements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <p><br><br></p>
+
+            <header class="updates-header fade-up">
+                <p class="section-label">Newsletter</p>
+                <h1 class="section-title">Get it immediately.</h1>
+                <p class="section-desc">Receive all the information you want about DRCheat, instantly.</p>
+            </header>
+
+            <div class="hero-cta" style="display: grid; place-items: center;">
+                <a href="/#subscribe" data-umami-event="updates-subscribe" class="btn btn-primary btn-lg">Subscribe to the newsletter. <i data-lucide="scroll-text"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script src="/assets/index.js"></script>
+</body>
+</html>

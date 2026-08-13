@@ -1,13 +1,679 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="1JOfuLKbgl_w1wg1omI7W9WO6oJNOxhHYiZ-MOkw5CE" />
-    <meta name="google-site-verification" content="rrKy4BlcwRvY3-5ymsimkwPKNuwndtE9kK64OsaE_5w" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
     <title>DRCheat</title>
+    <link rel="canonical" href="https://drcheat.on.ma/">
+    <link rel="stylesheet" href="/assets/index.css">
 
-    <p>Upcoming... DRCheat's very own website!</p>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DRCheat — The Ultimate NDT Toolkit">
+    <meta property="og:description" content="A powerful toolkit for NDT technicians, featuring unit conversion, cheat sheets, image tools, and productivity features.">
+    <meta property="og:url" content="https://drcheat.on.ma/">
+    <meta property="og:image" content="https://drcheat.on.ma/assets/og-image.png">
+    <meta property="og:site_name" content="DRCheat">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DRCheat — The Ultimate NDT Toolkit">
+    <meta name="twitter:description" content="A powerful toolkit for NDT technicians, featuring unit conversion, cheat sheets, image tools, and productivity features.">
+    <meta name="twitter:image" content="https://drcheat.on.ma/assets/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script defer src="https://analytics.drcheat.on.ma/script.js" data-website-id="e229d706-42db-4bab-a786-68987f3311f6"></script>
+    <script defer src="https://analytics.drcheat.on.ma/recorder.js" data-website-id="e229d706-42db-4bab-a786-68987f3311f6"></script>
+
+    <script> window.chtlConfig = { chatbotId: "7873943769" } </script>
+    <script async data-id="7873943769" id="chtl-script" src="https://chatling.ai/js/embed.js"></script>
 </head>
-</html>
+<body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand" data-umami-event="logo">
+                <img src="/assets/logo.png" alt="DRCheat Logo" class="brand-logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#features" data-umami-event="features">Features</a></li>
+                <li><a href="/#pricing" data-umami-event="pricing">Pricing</a></li>
+                <li><a href="/#faq" data-umami-event="faq">FAQ</a></li>
+                <li><a href="/updates" data-umami-event="updates">Updates</a></li>
+                <li><a href="/contact" data-umami-event="contact">Contact Us</a></li>
+                <li class="nav-mobile-actions">
+                    <a href="/#subscribe" data-umami-event="subscribe" class="btn btn-primary">Sign up for updates</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/#subscribe" data-umami-event="subscribe" class="btn btn-primary">Sign up for updates</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" data-umami-event="mobile-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Version 2.0.0 is coming soon!
+                </div>
+                <h1>The ultimate<br><span class="gradient-text">NDT toolkit</span></h1>
+                <p class="hero-desc">
+                    DRCheat is a powerful set of tools for NDT technicians featuring unit conversion,
+                    cheat sheets, image tools, and productivity features — all in one lightweight app.</p>
+                <div class="hero-cta">
+                    <a href="/#features" data-umami-event="features" class="btn btn-primary btn-lg">Get Started <i data-lucide="arrow-right"></i></a>
+                    <a href="/updates" data-umami-event="updates" class="btn btn-secondary btn-lg">View Updates<i data-lucide="monitor-down"></i></a>
+                </div>
+                <div class="trusted-row">
+                    <p class="trusted-label">Trusted by NDT technicians globally</p>
+                </div>
+            </div>
+
+            <div class="hero-mockup">
+                <div class="feature-visual">
+                    <div class="fv-toolbar">
+                        <span class="fv-dot"></span>
+                        <span class="fv-dot"></span>
+                        <span class="fv-dot"></span>
+                    </div>
+                    <div class="fv-body">
+                        <div class="code-block">
+                            <u>Continue Working</u><br>
+                            <br>
+                            Temperature Converter<br>
+                            <b>Continue →</b><br>
+                            <br>
+                            Pipe Schedule Sheets<br>
+                            <b>Continue →</b><br>
+                            <br>
+                            Image Cropping<br>
+                            <b>Continue →</b><br>
+                            <br>
+                            Notepad<br>
+                            <b>Continue →</b><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABBED FEATURES -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">Features</p>
+                <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+                <p class="section-desc">A complete toolkit that replaces multiple tools in your workflow, for all methods. Built for real field work — not office software.</p>
+            </div>
+
+            <div class="feature-tabs fade-up" role="tablist">
+                <button class="feature-tab active" data-tab="riddyai" role="tab" data-umami-event="feature-riddy">Riddy AI</button>
+                <button class="feature-tab" data-tab="calculatorsuite" role="tab" data-umami-event="feature-calculator">Calculator Suite</button>
+                <button class="feature-tab" data-tab="Instant Access" role="tab" data-umami-event="feature-access">Instant Access</button>
+                <button class="feature-tab" data-tab="imageprocessing" role="tab" data-umami-event="feature-image">Image Processing</button>
+                <button class="feature-tab" data-tab="productivitycollection" role="tab" data-umami-event="feature-productivity">Productivity Collection</button>
+                <button class="feature-tab" data-tab="connectsystem" role="tab" data-umami-event="feature-connect">Connect System</button>
+            </div>
+
+                <!-- Panel 1 - Unit Conversion-->
+                <div class="feature-panel active" data-panel="riddyai">
+                    <div class="feature-text">
+                        <div class="feat-icon">
+                            <i data-lucide="bot"></i>
+                        </div>
+                        <h3>Personalized Partner</h3>
+                        <p>
+                            Our specially curated AI model is designed to assist you with decisions you need help with,
+                            whenever you need.*  Riddy helps you stay on task, with a nostalgic design and an appearance
+                            based from Iridium-192.
+                            <br>*Internet is required to use this feature.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i data-lucide="check"></i>Quick response times</li>
+                            <li><i data-lucide="check"></i>Assistance whenever you need</li>
+                            <li><i data-lucide="check"></i>Customizable to your liking</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-visual">
+                        <div class="fv-toolbar">
+                            <span class="fv-dot"></span>
+                            <span class="fv-dot"></span>
+                            <span class="fv-dot"></span>
+                        </div>
+                        <div class="fv-body">
+                            <div class="code-block">
+                                User:<br>
+                                What is Snell's Law?<br>
+                                <br>
+                                Riddy:<br>
+                                Snell's Law describes the relationship between the angles of incidence and refraction when a wave passes from one medium to another. The equation for it is: <br><br>
+                                n₁ sin(θ₁) = n₂ sin(θ₂)<br><br>
+                                Would you like help solving for it?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 1 - Unit Conversion-->
+                <div class="feature-panel" data-panel="calculatorsuite">
+                    <div class="feature-text">
+                        <div class="feat-icon">
+                            <i data-lucide="calculator"></i>
+                        </div>
+                        <h3>Instant Calculations</h3>
+                        <p>
+                            A collection of built-in tools including unit converters, calculators, schedules,
+                            shot time calculations, and more to help you get quick, accurate results.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i data-lucide="check"></i>Always accurate with interchangable decimal values</li>
+                            <li><i data-lucide="check"></i>Real-time conversion as you type</li>
+                            <li><i data-lucide="check"></i>No internet required</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-visual">
+                        <div class="fv-toolbar">
+                            <span class="fv-dot"></span>
+                            <span class="fv-dot"></span>
+                            <span class="fv-dot"></span>
+                        </div>
+                        <div class="fv-body">
+                            <div class="code-block">
+                                Thickness: <b>2.5 in</b><br>
+                                = <b>63.5</b> mm<br><br>
+                                Temperature: <b>23.30°C</b><br>
+                                = <b>73.94°F</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Funnels -->
+                <div class="feature-panel" data-panel="Instant Access">
+                    <div class="feature-text">
+                        <div class="feat-icon">
+                            <i data-lucide="key-round"></i>
+                        </div>
+                        <h3>Always At Your Fingertips</h3>
+                        <p>Bring up your most needed features whenever with our command center that is available 
+                            with a short keybind. DRCheat is also capable of starting up with your computer, so 
+                            you have instant access when your workflow starts.
+                        </p>
+                        <ul class="feature-bullets">
+                            <li><i data-lucide="check"></i> Instant keyboard access</li>
+                            <li><i data-lucide="check"></i> Search for tools quickly</li>
+                            <li><i data-lucide="check"></i> Launch with your workflow</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="fv-toolbar"><span class="fv-dot"></span><span class="fv-dot"></span><span class="fv-dot"></span></div>
+                        <div class="fv-body">
+                            <div class="code-block">
+                                > pipe
+                                <br>
+                                <br>
+                                Found:<br>
+                                Pipe Schedule<br>
+                                <br>
+                                Launching...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: SDK -->
+                <div class="feature-panel" data-panel="imageprocessing">
+                    <div class="feature-text">
+                        <div class="feat-icon">
+                            <i data-lucide="images"></i>
+                        </div>
+                        <h3>Swift Photo Refining</h3>
+                        <p>Select your folder full of images, and get immediate options to organize your files. Cropping, sorting, renaming, screenshots, and more is all included in our curated list of photo editing features.</p>
+                        <ul class="feature-bullets">
+                            <li><i data-lucide="check"></i> Batch image tools</li>
+                            <li><i data-lucide="check"></i> Quick organization</li>
+                            <li><i data-lucide="check"></i> Inspection-ready exports</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="fv-toolbar"><span class="fv-dot"></span><span class="fv-dot"></span><span class="fv-dot"></span></div>
+                        <div class="fv-body">
+                            <div class="code-block">
+                                24 Images Processed ✓<br>
+                                <br><br>
+                                Cropped &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✓<br>
+                                Renamed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✓<br>
+                                Organized &nbsp;&nbsp;&nbsp;✓<br>
+                                Exported &nbsp;&nbsp;&nbsp;&nbsp;✓
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 4: Session Replay -->
+                <div class="feature-panel" data-panel="productivitycollection">
+                    <div class="feature-text">
+                        <div class="feat-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <h3>Assistive Features</h3>
+                        <p>Our full suite of productivity tools helps you get through your day faster. With a built-in job calendar, contact manager, notepad, app and file bookmarker, and so much more, you can get work done faster than ever.</p>
+                        <ul class="feature-bullets">
+                            <li><i data-lucide="check"></i> Manage jobs and notes</li>
+                            <li><i data-lucide="check"></i> Improve daily workflow</li>
+                            <li><i data-lucide="check"></i> Keep track of day-to-day items</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="fv-toolbar"><span class="fv-dot"></span><span class="fv-dot"></span><span class="fv-dot"></span></div>
+                        <div class="fv-body">
+                            <div class="code-block">
+                                ✓ Job schedule updated<br>
+                                ✓ Inspection notes saved<br>
+                                ✓ Contact added<br>
+                                ✓ Files organized<br>
+                                ✓ Workflow apps and files set-up<br>
+                                <br>
+                                5 tasks completed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 5: Privacy -->
+                <div class="feature-panel" data-panel="connectsystem">
+                    <div class="feature-text">
+                        <div class="feat-icon">
+                            <i data-lucide="messages-square"></i>
+                        </div>
+                        <h3>Seamless Communication</h3>
+                        <p>Contact other technicians using DRCheat via. Wi-Fi Direct, Bluetooth, or over the internet, no matter the location*. Send messages, files, voice recordings, and more with our simple solution.<br>*Internet is required to communicate online.</p>
+                        <ul class="feature-bullets">
+                            <li><i data-lucide="check"></i> Share files and messages</li>
+                            <li><i data-lucide="check"></i> Local and online communication</li>
+                            <li><i data-lucide="check"></i> Connect with other technicians</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="fv-toolbar"><span class="fv-dot"></span><span class="fv-dot"></span><span class="fv-dot"></span></div>
+                        <div class="fv-body">
+                            <div class="code-block">
+                                Richie<br>
+                                Could I get the images please?<br>
+                                <br>
+                                Jade<br>
+                                Received inspection images ✓<br>
+                                <br>
+                                You<br>
+                                Thanks!<br>
+                                Sending report.pdf...<br>
+                                <br>
+                                3 technicians online<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="10" data-suffix="x">0</div>
+                    <div class="stat-label">faster vs. manual workflow</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="22" data-suffix="+">0</div>
+                    <div class="stat-label">tools available</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="100" data-suffix="%" data-comma="true">0</div>
+                    <div class="stat-label">ad-free</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="0.99" data-prefix="<" data-decimal="2" data-suffix="s">0</div>
+                    <div class="stat-label">startup time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">Pricing</p>
+                <h2 class="section-title">Built for the way you work.</h2>
+                <p class="section-desc">Simple, flexible pricing.</p>
+            </div>
+
+            <div class="pricing-toggle-wrap fade-up">
+                <span class="pricing-toggle-label active" id="monthlyLabel">Monthly</span>
+                <button class="pricing-toggle" data-umami-event="pricing-toggle" id="pricingToggle" aria-label="Toggle pricing period"></button>
+                <span class="pricing-toggle-label" id="annualLabel">Yearly</span>
+                <span class="pricing-save">Extra savings!</span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card fade-up">
+                    <div class="pricing-plan-name">Basic</div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value" data-monthly="19.99" data-annual="16.99">19.99</span>
+                    </div>
+                    <div class="pricing-period" data-monthly="per month" data-annual-total="203.88">per month</div>
+                    <a href="#" data-umami-event="pricing-basic" class="btn btn-secondary" onclick="return false;">Not available for purchase yet</a>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Full NDT toolkit</li>
+                        <li><i data-lucide="check"></i> Offline access</li>
+                        <li><i data-lucide="check"></i> Standard Riddy AI</li>
+                        <li><i data-lucide="check"></i> Regular updates</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card featured fade-up">
+                    <span class="pricing-popular">Most popular</span>
+                    <div class="pricing-plan-name">Premium</div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value" data-monthly="24.99" data-annual="21.99">24.99</span>
+                    </div>
+                    <div class="pricing-period" data-monthly="per month" data-annual-total="263.88">per month</div>
+                    <a href="#" data-umami-event="pricing-premium" class="btn btn-secondary" onclick="return false;">Not available for purchase yet</a>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Everything in Basic</li>
+                        <li><i data-lucide="check"></i> Advanced Riddy AI</li>
+                        <li><i data-lucide="check"></i> Custom tools and presets</li>
+                        <li><i data-lucide="check"></i> Priority support</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card fade-up">
+                    <div class="pricing-plan-name">Enterprise</div>
+                    <div class="pricing-amount">
+                        <span class="pricing-value" data-monthly="Contact us" data-annual="Contact us">Contact us</span>
+                    </div>
+                    <div class="pricing-period" data-monthly="for more details">for more details</div>
+                    <a href="#" data-umami-event="pricing-enterprise" class="btn btn-secondary" onclick="return false;">Not available for purchase</a>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check"></i> Everything in Premium</li>
+                        <li><i data-lucide="check"></i> Team licensing</li>
+                        <li><i data-lucide="check"></i> Centralized management</li>
+                        <li><i data-lucide="check"></i> Company-specific integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-label">FAQ</p>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-desc">
+                    Everything you need to know about DRCheat.
+                </p>
+            </div>
+
+            <div class="faq-list fade-up">
+
+                <details class="faq-item" data-umami-event="faq-1">
+                    <summary>
+                        <span>What is DRCheat?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat is an all-in-one toolkit built for NDT technicians and students.
+                        It combines reference tables, calculators, cheat sheets, image tools,
+                        productivity features, and more into one lightweight Windows application.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-2">
+                    <summary>
+                        <span>Who is DRCheat for?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat is designed for NDT technicians, trainees, students, and anyone
+                        working in the field who needs quick access to important information and tools.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-3">
+                    <summary>
+                        <span>Which NDT methods does DRCheat support?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat is designed to support multiple NDT methods, including methods such
+                        as Digital Radiographic Testing (DRT), Real Time Radiography (RTR), Ultrasonic Testing (UT), 
+                        and other common inspection workflows.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-4">
+                    <summary>
+                        <span>Does DRCheat work offline?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Yes. Most features work completely offline. Internet access is only required
+                        for features such as Riddy AI, licensing, updates, and online communication
+                        through the Connect system.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-5">
+                    <summary>
+                        <span>What operating systems are supported?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat is currently available exclusively for Windows devices.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-6">
+                    <summary>
+                        <span>How much storage space does DRCheat require?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat is designed to stay lightweight and requires less than 1GB of
+                        storage space for installation.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-7">
+                    <summary>
+                        <span>Is DRCheat subscription-based?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Yes. DRCheat uses a subscription model per device, giving users access
+                        to updates, improvements, and ongoing feature development.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-8">
+                    <summary>
+                        <span>Do you offer company licenses?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Yes. Company and team licensing options are available for organizations
+                        that need multiple devices or users.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-9">
+                    <summary>
+                        <span>How do I install DRCheat?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Installation is simple. Download the installer, follow the setup steps,
+                        and DRCheat will be ready to use.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-10">
+                    <summary>
+                        <span>How do I receive updates?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat includes a built-in updater that makes it easy to install new
+                        versions and receive the latest improvements.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-11">
+                    <summary>
+                        <span>Does DRCheat include AI features?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Yes. DRCheat includes Riddy AI, an assistant designed to help with
+                        questions, decisions, and workflow support. Internet access is required
+                        for AI features.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-12">
+                    <summary>
+                        <span>Can I store my own notes and files in DRCheat?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Yes. DRCheat includes productivity tools that allow you to manage your
+                        own notes, files, references, and other useful information.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-13">
+                    <summary>
+                        <span>What is the Connect System?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        The Connect System allows technicians to communicate and share information
+                        through DRCheat using local connections or the internet when available.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-14">
+                    <summary>
+                        <span>Can I suggest new features?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        Absolutely. Feedback and feature suggestions help shape future versions
+                        of DRCheat.
+                    </p>
+                </details>
+
+                <details class="faq-item" data-umami-event="faq-15">
+                    <summary>
+                        <span>Can DRCheat replace all of my current tools?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <p>
+                        DRCheat is designed to reduce the number of separate tools needed during
+                        your workflow by combining commonly used references, calculations, and
+                        productivity features into one application.
+                    </p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe-section" id="subscribe">
+        <div class="container">
+            <div class="subscribe-inner fade-up">
+                <h2 class="section-title">Stay in the loop</h2>
+                <p class="section-desc">Software updates, information, tips, and zero spam. Unsubscribe anytime.</p>
+                
+                <form action="https://subscription.drcheat.on.ma/subscribe" method="POST" onsubmit="this.querySelector('button[type=submit]').textContent = 'Subscribing...';">
+                    <div class="honey" aria-hidden="true">
+                        <input type="text" name="title" tabindex="-1" autocomplete="off">
+                        <input type="text" name="company" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="subscribe-input-group">
+                        <input type="email" name="email" placeholder="Email Address" autocomplete="email" required></div>
+                    <div class="subscribe-input-group">
+                        <input type="text" name="name" placeholder="First Last" autocomplete="name" required pattern="\S+\s+\S+" title="Please enter your first and last name.">
+                        <button type="submit" class="btn btn-primary" data-umami-event="subscribe-submit">Subscribe</button>
+                    </div>
+                </form>
+
+                <div class="subscribe-meta">
+                    <span><i data-lucide="check" style="width: 14px; height: 14px;"></i>Highly rated</span>
+                    <span><i data-lucide="check" style="width: 14px; height: 14px;"></i>Instant information</span>
+                    <span><i data-lucide="check" style="width: 14px; height: 14px;"></i>Unsubscribe anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row-bottom">
+                <p class="footer-copy" style="color: var(--text-muted);">© <span id="currentYear"></span> DRCheat. All rights reserved.</p>
+                
+                <div class="footer-center">
+                    <a href="/terms" data-umami-event="footer-tos">Terms</a>
+                    <a href="/privacy" data-umami-event="footer-pp">Privacy</a>
+                    <a href="/disclaimer" data-umami-event="footer-disclaimer">Disclaimer</a>
+                </div>                
+                
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a aria-label="Phone" href="tel:+15878570859" data-umami-event="footer-phone">
+                            <i data-lucide="phone"></i>
+                        </a>
+                            <a aria-label="Email" href="mailto:drcheat@outlook.com" data-umami-event="footer-email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a aria-label="Homepage" href="https://drcheat.on.ma" data-umami-event="footer-homepage">
+                            <i data-lucide="globe"></i>
+                        </a>
+                        <a aria-label="YouTube" href="https://youtube.com/@DRCheatApp" data-umami-event="footer-youtube">
+                            <img src="https://cdn.simpleicons.org/youtube/474758" alt="YouTube" width="24" height="24">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script src="/assets/index.js"></script>
+</body>
+</html>
